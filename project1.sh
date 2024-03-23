@@ -1,13 +1,13 @@
 #!/bin/bash
-#Downloading software in different flavor of OS
+#Downloading software in centos distro of linux OS
 echo "INSTALLATION STARTED"
 if [[ $(uname) == "Linux" ]]
 then
     if [[ ${UID} -eq 0 ]]
     then
-        apt install git -y
+        yum install git -y
     else
-        sudo apt install git -y
+        sudo yum install git -y
     fi
 else
     echo "NOT INSTALLING"
